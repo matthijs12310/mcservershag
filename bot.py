@@ -7,10 +7,12 @@ import re
 import asyncio
 import paramiko
 from discord.ext import commands
+from dotenv import load_dotenv
 
 print(f"🔥 Loaded script as: {__name__}")
 
-TOKEN = "ODUyMjIyMzAzODc3NzI2MjQ5.GnIErZ.-pDjKosgAZgAF0T0QGMC-t3VCYNh1XOTWgRoQA"  # Replace with your actual token
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
 COMMAND = ["modal", "run", "-d", "main2.py"]
 modal_lock = asyncio.Lock()
 
