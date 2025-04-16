@@ -2,6 +2,7 @@ import discord
 import subprocess
 import time
 import signal
+import os
 import requests
 import re
 import asyncio
